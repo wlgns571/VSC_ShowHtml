@@ -1,0 +1,142 @@
+/* body{
+    background-color: red;
+} */
+/* 디자인 기본설정 (별은 모든 페이지 속성) */
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+body{
+    /* 1vh 높이값이 100분의 1단위
+       예를 들면, 브라우저 높이가 900px
+       1vh는 9px
+    */
+    height: 100vh;
+    background-color: gray;
+    text-align: center;
+}
+.login_form{
+    position: relative;
+    top: 50%;
+    width: 400px;
+    background-color: lightsalmon;
+}
+
+.login_form > h1 {
+    color: white;
+}
+.int-area{
+    width: 400px;
+    background-color: lightskyblue;
+}
+.int-area input{
+    width: 100%;
+    padding: 40px 10px 10px;
+    /* 부모의 배경색을 따라하겠다 = transparent */
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    color: white;
+}
+/* 클릭했을때 나오는 테두리를 보이지 않게 해줌 */
+.int-area input:focus {
+    outline: none;
+}
+.int-area > label {
+    font-size: 18px;
+    color: white;
+}
+.login_form label[for="mem_id"] {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+.login_form label[for="mem_pw"] {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+}
+.btn-area > button {
+    width: 420px;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #166cea;
+    margin-top: 30px;
+    padding: 0 10px 0;
+}
+.caption_ul >li {
+    /* li 앞에있는 점을 없애준다 */
+    list-style: none;
+    font-size: 20px;
+}
+/* 정렬 위치 잘 생각해야 함 */
+.caption_ul {
+    display: flex;
+    margin-top: 20px;
+}
+.caption a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+body {
+    background: url(../images/img1.jpg) no-repeat;
+    background-size: cover;
+}
+body, .login_form, .int-area {
+    background-color: transparent;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.int-area input[name="mem_id"]:focus + label {
+    top: 50px;
+    font-size: 13px;
+    color: #166cea;
+}
+.int-area input[name="mem_pw"]:focus + label {
+    top: 120px;
+    font-size: 13px;
+    color: #166cea;
+}
+.int-area label {
+    /* 모든것에 5초동안 ease라는 효과를 적용시킨다 */
+    transition: all .5s ease;
+    /* transition: all은 top으로 이동될때 모든 옵션에대해서 애니메이션 효과를 조건을 적용시켜 발생시킨다. 
+       ease는 천천히 시작되어 중간에 빨라지고 다시 느려짐
+    */
+}
+/* valid는 required일때 input태그안에 값이 있으면 고정이 가능 해짐 */
+.int-area input[name="mem_id"]:valid + label {
+    top: 50px;
+    font-size: 13px;
+    color: #166cea;
+}
+.int-area input[name="mem_pw"]:valid + label {
+    top: 120px;
+    font-size: 13px;
+    color: #166cea;
+}
+#btn_id:active {
+    color: gray;
+}
+.caption_ul a:active {
+    color: gray !important;
+}
+.login_form {
+    position: fixed;
+    /* 계산식(-) 공백은 필수 */
+    left: calc(50% - 200px);
+}
+.int-area label.warning {
+    color: red;
+    animation-duration: .3s ease;
+}

@@ -1,0 +1,643 @@
+/* *{
+    background-color: gray;
+} */
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+}
+
+.intro_bg {
+    width: 100%;
+    height: 720px;
+    background-color: lightblue;
+}
+
+.header {
+    width: 1280px;
+    height: 86px;
+    background-color: red;
+    display: flex;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav>li {
+    margin-left: 84px;
+}
+
+.nav>li>a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.searchArea {
+    width: 320px;
+    height: 40px;
+    background-color: green;
+    margin-top: 30px;
+}
+
+.nav {
+    margin-top: 30px;
+}
+
+.nav a:hover {
+    color: lime;
+}
+
+/* dropDown */
+.nav li ul {
+    display: none;
+    margin-left: 7px;
+}
+
+.nav li:hover ul {
+    display: block;
+    animation: fade-in .5s;
+    animation-fill-mode: forwards;
+}
+
+/* opacity는 투명도 */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nav a {
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.searchArea>form>input {
+    width: 250px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    color: white;
+    padding-left: 15px;
+}
+
+.searchArea>form>span {
+    width: 50px;
+    color: white;
+    font-weight: bold;
+    /* 마우스 커서를 위에 올리면 손가락 모양으로 바꿔줌 */
+    cursor: pointer;
+}
+
+.intro_text {
+    width: 100%;
+    text-align: center;
+    background-color: violet;
+    position: relative;
+    top: 300px;
+}
+
+.intro_text>h1,
+.intro_text>h4 {
+    color: white;
+}
+
+.intro_bg {
+    background-image: url("../images/img102.jpg");
+    background-size: 100% 718px;
+    opacity: 0.8;
+}
+
+#wrap {
+    background-color: black;
+}
+
+.header,
+.nav,
+.searchArea,
+.intro_text {
+    /* 부모 배경색으로 전환 */
+    background-color: transparent;
+}
+
+/* 1차 작업 e */
+
+.sub_title {
+    width: 1280px;
+    height: 130px;
+    background-color: tomato;
+    /* 한줄로 정렬 */
+    display: flex;
+    position: relative;
+    top: -65px;
+}
+
+.sub_title>li>div {
+    background-color: violet;
+    width: 315px;
+    height: 120px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.sub_title>li>div {
+    background-color: white;
+}
+
+.sub_title {
+    background-color: white;
+}
+
+.sub_title {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* not(li:last-child) li에 있는 마지막 속성을 지움.  */
+.sub_title>li:not(li:last-child)>div {
+    border-right: 1px solid gray;
+}
+
+/* 2차 작업 sub_title e */
+
+.main_text0 {
+    width: 100%;
+    height: 620px;
+    background-color: lightblue;
+    margin-top: -130px;
+}
+
+.main_text0>h1 {
+    text-align: center;
+    padding-top: 100px;
+    /* 마진을 쓰게 되면 같이 내려옴 */
+    /* margin-top: 100px; */
+    font-size: 60px;
+}
+
+.main_text0>p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.main_text0>ul {
+    display: flex;
+    width: 1280px;
+    height: 302px;
+    background-color: lightcoral;
+}
+
+.icons>li {
+    background-color: lightgreen;
+    width: 400px;
+    /* li 안에있는 div 이미지들이 같이 정렬 됨 */
+    text-align: center;
+}
+
+.main_text0 {
+    background-color: #f0f3f5;
+}
+
+.main_text0>ul {
+    background-color: transparent;
+}
+
+.icons>li {
+    background-color: #8ce7f7;
+}
+
+.contents1_bold>p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.more {
+    background-color: mediumblue;
+    width: 100px;
+    height: 30px;
+    color: white;
+    padding-top: 5px;
+    margin: 25px auto;
+}
+
+/* 3차 작업 e */
+.main_text1 {
+    width: 100%;
+    height: 700px;
+    background-color: lightblue;
+}
+
+.main_text1>h1 {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 30px;
+}
+
+/* main_text1 후손 p태그로 사용하면 p태그 전체가 적용되기에 하단에 justify가 적용되지 않는다. */
+.contents2>p {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.service {
+    display: flex;
+    background-color: lightsalmon;
+    width: 1280px;
+    height: 440px;
+    margin-top: 20px;
+}
+
+.service>div>img {
+    width: 640px;
+    height: 440px;
+}
+
+.service>div:last-child {
+    background-color: lightyellow;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+.main_text1 {
+    background-color: #fff;
+}
+
+/* 4차 작업 e */
+.main_text2>ul {
+    width: 100%;
+    height: 500px;
+    background-color: mediumaquamarine;
+    display: flex;
+}
+
+.main_text2>ul>li {
+    width: 50%;
+}
+
+.main_text2>ul>li:first-child {
+    background-color: lightgoldenrodyellow;
+}
+
+.main_text2>ul>li:last-child {
+    background-color: lightpink;
+}
+
+.main_text2>ul>li:first-child>div {
+    width: 100%;
+    height: 500px;
+    background-color: lightcoral;
+    text-align: center;
+}
+
+.main_text2>ul>li:last-child>div {
+    width: 100%;
+    height: 500px;
+    background-color: lightseagreen;
+    text-align: center;
+}
+
+.main_text2>ul>li>div>h1 {
+    padding-top: 160px;
+}
+
+.main_text2 h1,
+.main_text2 p,
+.more2 {
+    color: white;
+    padding-bottom: 20px;
+}
+
+.more2 {
+    border: 1px solid #fff;
+    width: 150px;
+    height: 20px;
+}
+
+.more2>p {
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.last_bg1 {
+    /* 이미지크기를 직접 조정하는것보단 div태그 자체의 크기를 조정하는것이 좋다 */
+    background-image: url(../images/img1.jpg);
+    background-size: 100% 500px;
+}
+
+.last_bg1:hover {
+    opacity: 0.7;
+}
+
+.main_text2>ul>li {
+    background-color: black !important;
+}
+
+.last_bg2 {
+    background-image: url(../images/img2.jpg);
+    background-size: 100% 500px;
+}
+
+.last_bg2:hover {
+    opacity: 0.7;
+}
+
+/* 5차 작업 e */
+.div_footer {
+    width: 100%;
+    height: 150px;
+    background-color: lightslategrey;
+    display: flex;
+}
+
+.div_footer>div {
+    padding-top: 30px;
+}
+
+.div_footer>div:first-child {
+    flex: 4;
+    background-color: lightslategray;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_footer>div:last-child {
+    flex: 6;
+    background-color: lightslategray;
+}
+
+/* 반응형 s */
+/* 화면너비가 0부터 1220px 일때 */
+@media(max-width:1220px) {
+
+    /*#wrap {width: 95%;}
+        %로 변경하여 스크롤바가 생기지 않게 하기 위함
+    */
+    #wrap {
+        width: 95%;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .nav li {
+        margin-left: 30px;
+    }
+
+    .sub_title {
+        width: 95%;
+        background-color: lightgreen;
+    }
+
+    .sub_title>li>div {
+        width: 250px;
+    }
+
+    .sub_title {
+        background-color: white;
+    }
+
+    .main_text0>ul {
+        width: 95%;
+        background-color: lightgreen;
+    }
+
+    .icons>li {
+        width: 340px;
+    }
+
+    .main_text0>ul {
+        background-color: white;
+    }
+
+    .service {
+        width: 95%;
+    }
+}
+
+/* 체크박스를 930px 이전에 보이지 않게 하기 */
+#menuicon,
+.header_icon {
+    display: none;
+}
+
+/* 화면 너비가 0부터 930px 일때 */
+@media(max-width:930px) {
+    .nav {
+        display: none;
+    }
+
+    .searchArea {
+        margin: 0;
+    }
+
+    #input_search {
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    input[id="menuicon"]+label {
+        /* label은 영역이 없지만 영역을 만들어주기 위해 block을 사용함 */
+        display: block;
+        width: 30px;
+        height: 20px;
+        background-color: lightgreen;
+        position: fixed;
+        right: 30px;
+        top: 25px;
+        cursor: pointer;
+    }
+
+    /* span 태그에 가로바 설정 */
+    input[id="menuicon"]+label>span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: white;
+    }
+
+    /* span 3줄 위치 설정 */
+    input[id="menuicon"]+label span:nth-child(1) {
+        position: absolute;
+        top: 0;
+    }
+
+    input[id="menuicon"]+label span:nth-child(2) {
+        position: absolute;
+        /* height가 4px이기에 반만 끌어올리면 된다 
+           그러므로 -2px */
+        top: calc(50% - 2px)
+    }
+
+    input[id="menuicon"]+label span:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .header_icon {
+        display: block;
+    }
+
+    /* 좌측 네비게이션 바 */
+    .header_icon {
+        width: 300px;
+        height: 100%;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        right: -300px;
+    }
+
+    /* 클릭 되었을 때 X로 변경하기
+    라벨에 input checkbox를 적용하여 라벨이 클릭되면
+    input태그가 체크 됩니다. 따라서 input태그가 체크된
+    상황이라면 라벨태그 하위에 span태그에 애니메이션 적용 */
+    input[id="menuicon"]:checked+label span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+    input[id="menuicon"]:checked+label span:nth-child(2) {
+        opacity: 0;
+    }
+    input[id="menuicon"]:checked+label span:nth-child(3) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+    input[id="menuicon"]:checked+label+div {
+        right: 0;
+    }
+    input[id="menuicon"]+label {
+        z-index: 2;
+        background-color: transparent;
+    }
+    input[id="menuicon"]+label span {
+        border-radius: 30px;
+        transition: all .35s;
+    }
+    .header_icon {
+        transition: all .35s;
+    }
+    .menu {
+        background-color: lightcoral;
+        width: 250px;
+        height: 500px;
+        margin: 100px auto;
+    }
+    .menu > li {
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+    .menu > li > a {
+        color: white;
+        font-weight: bold;
+    }
+    .menu {
+        background-color: transparent;
+    }
+    .sub_title {
+        background-color: tomato;
+        /* width: 95%; */
+        height: 260px;
+        /* .sub_title > li 를 inline-block을 주기위해 사용 */
+        display: block;
+    }
+    .sub_title > li {
+        display: inline-block;
+        width: 350px;
+    }
+    .sub_title {
+        top: 0;
+        text-align: center;
+        background-color: white;
+    }
+    .sub_title > li > div {
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    .main_text0 > h1 {
+        padding-top: 150px;
+    }
+    .icons > li {
+        width: 230px;
+    }
+    .main_text1 {
+        height: 1100px;
+        background-color: aquamarine;
+        margin-top: 20px;
+    }
+    .service {
+        display: block;
+        width: 100%;
+        height: 880px;
+        background-color: coral;
+    }
+    .service > div:first-child > img {
+        width: 100%;
+    }
+    .contents3 {
+        height: 440px;
+    }
+    .main_text1, .service {
+        background-color: white;
+    }
+}
+/* 화면 너비가 0 부터 550px일때 (모바일) */
+@media(max-width:550px) {
+    /* #wrap {
+        width: 100%;
+    } */
+    .sub_title {
+        background-color: tomato;
+        height: 510px;
+        display: block;
+    }
+    .sub_title > li > div {
+        width: 300px;
+    }
+    .sub_title {
+        background-color: white;
+    }
+    .main_text0 {
+        height: 1220px;
+        background-color: tomato;
+    }
+    .main_text0 > ul {
+        display: block;
+        height: 900px;
+        background-color: lightpink;
+    }
+    .main_text0 > ul > li {
+        width: 400px;
+    }
+    .sub_title, .main_text0, .main_text0 > ul {
+        background-color: white;
+    }
+    .main_text2 > ul {
+        display: block;
+        height: 1000px;
+    }
+    .main_text2 > ul > li {
+        width: 100%;
+    }
+    .div_footer {
+        height: 230px !important;
+    }
+}
